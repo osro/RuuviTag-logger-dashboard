@@ -13,11 +13,26 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { DashComponent } from './dash/dash.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { CardComponent } from './card/card.component';
+import { BatteryStatusChartComponent } from './charts/battery-status-chart/battery-status-chart.component';
+import { TemperatureChartComponent } from './charts/temperature-chart/temperature-chart.component';
+import { HumidityChartComponent } from './charts/humidity-chart/humidity-chart.component';
+import { AirPresssureChartComponent } from './charts/air-presssure-chart/air-presssure-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    DashComponent,
+    CardComponent,
+    BatteryStatusChartComponent,
+    TemperatureChartComponent,
+    HumidityChartComponent,
+    AirPresssureChartComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +44,10 @@ import { MatListModule } from '@angular/material/list';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
