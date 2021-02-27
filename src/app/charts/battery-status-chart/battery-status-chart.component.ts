@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType } from 'chart.js';
 import { Label, SingleDataSet } from 'ng2-charts';
+import { DatabaseService } from './../../service/database.service';
 
 @Component({
   selector: 'app-battery-status-chart',

@@ -22,6 +22,10 @@ import { BatteryStatusChartComponent } from './charts/battery-status-chart/batte
 import { TemperatureChartComponent } from './charts/temperature-chart/temperature-chart.component';
 import { HumidityChartComponent } from './charts/humidity-chart/humidity-chart.component';
 import { AirPresssureChartComponent } from './charts/air-presssure-chart/air-presssure-chart.component';
+import { MiniCardComponent } from './mini-card/mini-card.component';
+import { BatteryCardComponent } from './mini-card/battery-card.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import { AirPresssureChartComponent } from './charts/air-presssure-chart/air-pre
     BatteryStatusChartComponent,
     TemperatureChartComponent,
     HumidityChartComponent,
-    AirPresssureChartComponent
+    AirPresssureChartComponent,
+    MiniCardComponent,
+    BatteryCardComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +53,8 @@ import { AirPresssureChartComponent } from './charts/air-presssure-chart/air-pre
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
