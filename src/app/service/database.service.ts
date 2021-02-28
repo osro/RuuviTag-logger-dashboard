@@ -27,6 +27,9 @@ export class DatabaseService {
     return this.httpClient.get<Response>(this.endPoint + '/api/tag/' + mac + '/battery');
   }
 
+  getTemperatureData(mac: String, days: Number): Observable<Response> {
+    return this.httpClient.get<Response>(this.endPoint + '/api/tag/' + mac + '/temperature/' + days);
+  }
   httpError(error) {
     return throwError(error.message);
   }

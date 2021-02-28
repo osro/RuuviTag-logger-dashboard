@@ -25,6 +25,7 @@ import { AirPresssureChartComponent } from './charts/air-presssure-chart/air-pre
 import { MiniCardComponent } from './mini-card/mini-card.component';
 import { BatteryCardComponent } from './mini-card/battery-card.component';
 import { HttpClientModule } from '@angular/common/http';
+import * as _ from "lodash"
 
 
 @NgModule({
