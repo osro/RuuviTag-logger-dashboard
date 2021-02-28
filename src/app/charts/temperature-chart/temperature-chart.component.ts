@@ -26,6 +26,13 @@ export class TemperatureChartComponent implements OnInit {
 
   public lineChartData: ChartDataSets[] = [];
   public lineChartOptions: ChartOptions = {
+    responsive: true,
+    legend: {
+      display: false
+    },
+    title: {
+      text: 'Temperature °C'
+    },
     scales: {
       xAxes: [{
         type: 'time',
@@ -81,7 +88,7 @@ export class TemperatureChartComponent implements OnInit {
 
   createDataset(data) {
 
-    let dataset: { x:string, y:number }[] = [];
+    let dataset: { x: string, y: number }[] = [];
 
     _.forEach(data, item => {
       dataset.push({
@@ -91,7 +98,11 @@ export class TemperatureChartComponent implements OnInit {
     });
 
     this.lineChartData = [{
-      data: dataset
+      data: dataset,
+			borderColor: 'red',
+      fill: false,
+      lineTension: 1,
+      pointRadius: 0,
     }];
     console.log('dataset done');
   }
