@@ -1,0 +1,65 @@
+<!--dash.component.html-->
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="250px">
+    <!--Mini Cards-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.miniCard.cols" [rowspan]="( cardLayout | async )?.miniCard.rows">
+
+      <mat-grid-list cols="4" rowHeight="200px" class="minicards">
+
+        <mat-grid-tile>
+          <app-battery-card title="Sisä" mac="F2:A1:01:06:42:1C"></app-battery-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <app-battery-card title="Ulko" mac="FD:34:81:AB:B0:5E"></app-battery-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <app-battery-card title="Sisä" mac="F2:A1:01:06:42:1C"></app-battery-card>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <app-battery-card title="Ulko" mac="FD:34:81:AB:B0:5E"></app-battery-card>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+
+    </mat-grid-tile>
+    <!--Charts-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+
+      <app-card title="Temperature Sisä">
+        <app-temperature-chart mac="F2:A1:01:06:42:1C" days="30"></app-temperature-chart>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+
+      <app-card title="Temperature Ulko">
+        <app-temperature-chart mac="FD:34:81:AB:B0:5E" days="30"></app-temperature-chart>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+
+      <app-card title="Card x">
+        <div>Chart Content Here</div>
+      </app-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+
+      <app-card title="Card y">
+        <div>Chart Content Here</div>
+      </app-card>
+    </mat-grid-tile>
+
+    <!--Table-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.table.cols" [rowspan]="( cardLayout | async )?.table.rows">
+      <app-card title="Card 9">
+        <div>Table Content Here</div>
+      </app-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -6,16 +6,56 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ChartsModule } from 'ng2-charts';
+import { NavComponent } from './nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DashComponent } from './dash/dash.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { CardComponent } from './card/card.component';
+import { BatteryStatusChartComponent } from './charts/battery-status-chart/battery-status-chart.component';
+import { TemperatureChartComponent } from './charts/temperature-chart/temperature-chart.component';
+import { HumidityChartComponent } from './charts/humidity-chart/humidity-chart.component';
+import { AirPresssureChartComponent } from './charts/air-presssure-chart/air-presssure-chart.component';
+import { MiniCardComponent } from './mini-card/mini-card.component';
+import { BatteryCardComponent } from './mini-card/battery-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import * as _ from "lodash"
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavComponent,
+    DashComponent,
+    CardComponent,
+    BatteryStatusChartComponent,
+    TemperatureChartComponent,
+    HumidityChartComponent,
+    AirPresssureChartComponent,
+    MiniCardComponent,
+    BatteryCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ChartsModule
+    ChartsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

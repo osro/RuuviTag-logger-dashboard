@@ -2,3 +2,12 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.chartContainer canvas {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.chartContainer{
+    height: 100%;    
+}
